@@ -40,11 +40,13 @@ group :test do
   gem 'turn', :require => false
   gem 'fakeweb'
   gem "database_cleaner"
+  gem "rspec"
+  gem "rspec-rails"
   gem "mongoid-rspec"
   gem "factory_girl_rails"
   gem "cucumber-rails", '~>1.0.2'
   gem "capybara"
-  gem "launchy"
+  gem "launchy" # for using Then show me the page
   gem "ci_reporter", :require => false
   gem "test-unit", :require => false
   gem "simplecov", :require => false
