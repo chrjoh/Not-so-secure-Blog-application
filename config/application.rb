@@ -53,6 +53,9 @@ module Nssba
     config.assets.version = '1.0'
     
     config.generators do |g|
+      # don't generate RSpec tests for views and helpers
+      g.view_specs false
+      g.helper_specs false
       g.orm :mongoid
       g.template_engine :haml
       g.test_framework :rspec, :fixture => true, :views => false

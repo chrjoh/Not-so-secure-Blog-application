@@ -23,7 +23,7 @@ gem 'mongoid-generator'
 gem "haml"
 gem 'kaminari'
 gem "haml-rails", :group => :development
-
+gem "rspec-rails", :group => :development
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
