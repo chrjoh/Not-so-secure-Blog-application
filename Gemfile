@@ -21,6 +21,7 @@ gem "mongoid"
 gem 'mongoid_taggable'
 gem 'mongoid-generator'
 gem "haml"
+gem 'kaminari'
 gem "haml-rails", :group => :development
 
 # To use ActiveModel has_secure_password

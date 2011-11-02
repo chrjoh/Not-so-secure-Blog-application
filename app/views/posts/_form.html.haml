@@ -1,0 +1,24 @@
+.first.grid1 &nbsp;
+= form_for @post, :html => {:class => 'grid10 main_form'} do |f| 
+  .first.grid10.box
+    .first.grid10.subhead
+      .first.grid2.label
+        %h3 Post
+    .first.grid2.label
+      = f.label :title, "Title"
+    .grid8.field
+      = f.text_field :title
+    
+    .first.grid2.label
+      = f.label :body, "Body"
+    .grid8.field
+      = f.text_area :body
+    
+    .first.grid2.label
+      = f.label :published, "Published"
+    .grid8.field
+      = f.check_box :published          
+     
+  .first.grid10.submit
+    = f.submit :class => 'button save'
+        

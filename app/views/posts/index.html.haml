@@ -1,0 +1,20 @@
+.grid1.first &nbsp;
+
+.grid10.box
+  .first.grid10.subhead
+    .first.grid2.label
+      %h3 Posts
+  - for post in @posts
+    .first.grid10.article_row
+      .first.grid2
+        = post.title
+      .grid6
+        .first.grid6
+          = post.body
+                
+  .first.grid10
+    -#= paginate @posts
+
+.grid1.first &nbsp;
+.grid10
+  = link_to('new post', new_post_url, :class => "button add")
