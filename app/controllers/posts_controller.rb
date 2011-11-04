@@ -2,6 +2,8 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @posts = @posts.order_by([[:created_at, :desc]])
+
     @posts = @posts.page params[:page] unless @posts.count == 0
     respond_to do |format|
       format.html

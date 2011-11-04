@@ -4,7 +4,7 @@
 
 //= require 'posts'
 
-//= require 'objects'
+//= require 'site-objects'
 
 // Invalidate whenever any of the partials is updated.
 //= depend_on '_responsive'
