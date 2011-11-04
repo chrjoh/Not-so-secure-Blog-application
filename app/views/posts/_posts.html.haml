@@ -1,0 +1,11 @@
+.post-post-feed
+  %h3.post-feed-heading= "Senaste uppdateringarna"
+
+  %ol
+    - posts.each do |post|
+      %li.post-feed
+        %h4.post-feed-heading= post.title
+
+        %p.post-feed-text
+          = post.body
+-#= paginate @posts

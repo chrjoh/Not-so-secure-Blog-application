@@ -1,0 +1,103 @@
+@import 'responsive'
+@import 'typography'
+
+// Layout
+// -----------------------------------------------------------------------------
+
+.post
+  @include responsive-layout
+
+.post-main, .post-aside-1, .post-aside-2
+  @include responsive-unit
+
+.post-aside-2
+  @include responsive-layout
+
+.post-admin
+  @include responsive-unit
+
+.post-header
+  margin-bottom: 2em
+
+.post-post-feed
+  margin-top: 2em
+
+@media only screen and (min-width: 769px)
+  .post-main
+    margin-left: 25%
+    width: 49%
+    margin-right: 1%
+
+  .post-aside-1
+    margin-left: -75%
+    width: 24%
+    margin-right: 1%
+
+  .post-aside-2
+    margin-left: 50%
+    width: 25%
+
+  .post-admin
+    width: 100%
+
+@media only screen and (min-width: 481px) and (max-width: 768px)
+  .post-main
+    margin-left: 33.33333%
+    width: 66.66666%
+    margin-bottom: 1em
+
+  .post-aside-1
+    margin-left: -100%
+    width: 32.33333%
+    margin-right: 1%
+
+  .post-aside-2
+    margin-left: 33.33333%
+    width: 66.66666%
+
+  .post-images
+    width: 50%
+
+@media only screen and (max-width: 480px)
+  .post-main, .post-aside-1, .post-aside-2
+    width: 100%
+    margin-bottom: 1em
+
+  .post-images
+    width: 50%
+
+// Page Objects
+// -----------------------------------------------------------------------------
+
+.post-heading
+  @include font_32px
+  font-weight: bold
+
+.post-images
+  height: 200px
+
+.post-nav
+  width: 100%
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+  margin-left: -1em
+  margin-bottom: 2em
+  padding-left: 2em
+  background-color: #f5f5f1
+  color: #9400d3
+
+.nav-alternative 
+  @include font_14px
+  font-weight: bold  
+  display: inline-block
+  margin-top: 1em
+  margin-bottom: 1em
+  padding-right: 2em
+  padding-left: 2em
+  border-right: 2px dotted #ccc 
+
+.nav-link, .nav-link:link, .nav-link:visited
+  color: #708090
+
+.last-alternative 
+  border: none

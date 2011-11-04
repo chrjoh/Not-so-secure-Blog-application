@@ -1,9 +1,24 @@
-.first.grid1 &nbsp;
-.grid10.box
-  .first.grid10.subhead
-    .first.grid2.label
-      %h3 
-        = @post.title
-  .first.grid10.article_attribute
-    = simple_format(@post.body)
-  .first.grid10.article_attribute
+%section.post
+
+  .post-main
+    %h4.post-show-heading= @post.title
+    %p.post-feed-text
+      = simple_format(@post.body)
+
+  %aside.post-aside-1
+    %h4 Latest posts
+
+    %ol
+      - latest_posts.each do |post|
+        %li.update
+          %h4.update-heading= link_to(post.title,post_path(post))
+
+
+  %aside.post-aside-2
+    .post-admin
+      %h2 Admin section
+      %ol
+        %li
+          = link_to('new post', new_post_url, :class => "button add")
+
+

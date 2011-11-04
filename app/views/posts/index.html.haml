@@ -1,20 +1,20 @@
-.grid1.first &nbsp;
+%section.post
 
-.grid10.box
-  .first.grid10.subhead
-    .first.grid2.label
-      %h3 Posts
-  - for post in @posts
-    .first.grid10.article_row
-      .first.grid2
-        = post.title
-      .grid6
-        .first.grid6
-          = post.body
-                
-  .first.grid10
-    -#= paginate @posts
+  .post-main
+    = render partial: 'posts', locals: {posts: @posts[0,[@posts.length,3].min]}
 
-.grid1.first &nbsp;
-.grid10
-  = link_to('new post', new_post_url, :class => "button add")
+  %aside.post-aside-1
+    %h4 Latest posts
+
+    %ol
+      - latest_posts.each do |post|
+        %li.update
+          %h4.update-heading= link_to(post.title,post_path(post))
+
+
+  %aside.post-aside-2
+    .post-admin
+      %h2 Admin section
+      %ol
+        %li
+          = link_to('new post', new_post_url, :class => "button add")

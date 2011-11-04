@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title BLOG
+
+    = stylesheet_link_tag 'application'
+    = favicon_link_tag 'favicon.ico'
+
+    %meta{charset: 'utf-8'}
+    = csrf_meta_tags
+
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'}
+
+  %body
+    %header.site-nav
+      = link_to '/' do
+        %h1.site-logo The blog
+
+    = content_for?(:content) ? yield(:content) : yield
+
+    = javascript_include_tag 'application'
