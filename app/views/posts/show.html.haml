@@ -5,20 +5,5 @@
     %p.post-feed-text
       = simple_format(@post.body)
 
-  %aside.post-aside-1
-    %h4.post-feed-heading Latest posts
-
-    %ol
-      - latest_posts.each do |post|
-        %li.update
-          %h4.update-heading= link_to(post.title,post_path(post))
-
-
-  %aside.post-aside-2
-    .post-admin
-      %h2.post-admin-heading Admin section
-      %ol
-        %li
-          = link_to('new post', new_post_url, :class => "button add")
-
+  = render partial: 'side_bars'
 
