@@ -8,4 +8,6 @@
 
         %p.post-feed-text
           = post.body
--#= paginate @posts
+
+    .post-pagination
+      = paginate posts

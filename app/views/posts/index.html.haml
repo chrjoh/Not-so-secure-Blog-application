@@ -1,6 +1,6 @@
 %section.post
 
   .post-main
-    = render partial: 'posts', locals: {posts: @posts[0,[@posts.length,3].min]}
-
+    = render partial: 'posts', locals: {posts: @posts}
+  
   = render partial: 'side_bars'
