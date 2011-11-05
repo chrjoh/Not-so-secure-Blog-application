@@ -55,26 +55,42 @@
     margin-left: 33.33333%
     width: 66.66666%
 
-  .post-images
-    width: 50%
-
 @media only screen and (max-width: 480px)
   .post-main, .post-aside-1, .post-aside-2
     width: 100%
     margin-bottom: 1em
 
-  .post-images
-    width: 50%
-
 .post-heading
   @include font_32px
   font-weight: bold
 
-.post-images
-  height: 200px
+// Form layout
+// -----------------------------------------------------------------------------
+.form.centred
+  margin-left: auto
+  margin-right: auto
+  width: 50%
 
-// pagination
+.main_form
+  width: 100%
+
+.form.grid1.label
+  @include font_16px
+  font-weight: bold
+  margin-bottom: 0.5em
+
+.form.grid1.field
+  margin-top: 0em
+  margin-bottom: 1.5em
+
+.form.grid1.checkbox
+  @include font_16px
+  font-weight: bold
+  margin-bottom: 0.5em
+
+// Pagination layout
+// -----------------------------------------------------------------------------
 .post-pagination
   @include font_12px
   font-weight: bold
-  margin-top: 1em
+  margin-top: 1.5em

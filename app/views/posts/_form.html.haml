@@ -1,20 +1,20 @@
-%ol
-  = form_for post, :html => {:class => 'main_form'} do |f|
-    %li
-      .form.grid1.label
-        = f.label :title, "Title"
-      .form.grid1.field
-        = f.text_field :title
-    %li
-      .form.grid1.label
-      = f.label :body, "Body"
-      .form.grid1.field
-      = f.text_area :body
-    %li
-      .form.grid1.label
-      = f.label :published, "Published"
-      .form.grid1.field
-      = f.check_box :published
-    %li
-      = f.submit :class => 'button save'
+= form_for post, :html => {:class => 'main_form'} do |f|
+  %fieldset.form.centred
+    %ol
+      %li
+        .form.grid1.label
+          = f.label :title, "Title"
+        .form.grid1.field
+          = f.text_field :title
+      %li
+        .form.grid1.label
+          = f.label :body, "Body"
+        .form.grid1.field
+          = f.text_area :body
+      %li
+        .form.grid1.checkbox
+          = f.label :published, "Published"
+          = f.check_box :published
+      %li
+        = f.submit :class => 'button save'
 
