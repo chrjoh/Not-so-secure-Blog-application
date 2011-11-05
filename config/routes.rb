@@ -1,6 +1,8 @@
 Nssba::Application.routes.draw do
   
-  resources :posts
+  resources :posts do
+    get 'page/:page', :action => :index, :on => :collection
+  end
   
   root :to => 'posts#index'
 

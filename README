@@ -259,3 +259,7 @@ vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+
+Extra info
+    How to use factory girl in cucumber
+    http://collectiveidea.com/blog/archives/2010/09/09/practical-cucumber-factory-girl-steps/
