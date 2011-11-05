@@ -1,5 +1,5 @@
 .post-post-feed
-  %h3.post-feed-heading= "Senaste uppdateringarna"
+  %h4.post-feed-heading= "Senaste uppdateringarna"
 
   %ol
     - posts.each do |post|
@@ -9,5 +9,7 @@
         %p.post-feed-text
           = post.body
 
+      %hr.post-divider
+        
     .post-pagination
       = paginate posts

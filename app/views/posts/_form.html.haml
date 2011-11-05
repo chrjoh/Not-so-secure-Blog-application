@@ -3,18 +3,18 @@
     %ol
       %li
         .form.grid1.label
-          = f.label :title, "Title"
+          = f.label :title, "Titel"
         .form.grid1.field
           = f.text_field :title
       %li
         .form.grid1.label
-          = f.label :body, "Body"
+          = f.label :body, "Löptext"
         .form.grid1.field
           = f.text_area :body
       %li
         .form.grid1.checkbox
-          = f.label :published, "Published"
+          = f.label :published, "Publicerad"
           = f.check_box :published
       %li
-        = f.submit :class => 'button save'
+        = f.submit :class => 'button save' 
 
