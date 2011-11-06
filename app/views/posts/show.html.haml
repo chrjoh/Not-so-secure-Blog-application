@@ -1,9 +1,10 @@
 %section.post
 
   .post-main
-    %h4.post-show-heading= @post.title
-    %p.post-feed-text
-      = simple_format(@post.body)
+    .post-background
+      %h4.post-show-heading= @post.title
+      %p.post-feed-text
+        = simple_format(@post.body)
 
   = render partial: 'side_bars'
 
