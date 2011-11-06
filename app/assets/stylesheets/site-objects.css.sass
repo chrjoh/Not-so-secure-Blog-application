@@ -5,11 +5,7 @@
 
 .site-nav
   margin: 3em 0
-  //-moz-border-radius: 1em
-  //-webkit-border-radius: 1em
-  //border-radius: 1em
-  //background-image: -moz-linear-gradient(top, red, orange, yellow, green, blue, indigo, violet)
-  
+
 .site-logo
   background: url('logo_black.png') no-repeat left top
   width: 120px
@@ -35,13 +31,15 @@
 .post-feed
   clear: left
   margin: 0.5em
-  padding: 1em 1em 1em 1em
-  // color #ea1287
-  border-left: 0.1em solid hsla(328, 86%, 49%,.5)
+
+.post-background
+  padding: 1em
+  border-left: 0.1em solid hsla(328, 86%, 49%,.5) // color #ea1287
   border-rigth: 0.1em solid hsla(328, 86%, 49%,.5)
   border-bottom: 0.1em solid hsla(328, 86%, 49%,.5)
   background-color: hsla(328, 86%, 49%,.5)
   background-image: -moz-linear-gradient(top, rgb(0,0,0),rgb(234,18,135))
+  background-image: -webkit-linear-gradient(top, rgb(0,0,0),rgb(234,18,135))
   -moz-border-radius: 1em
   -webkit-border-radius: 1em
   border-radius: 1em
@@ -59,6 +57,17 @@
 
 // Headings
 // -----------------------------------------------------------------------------
+.heading-center
+  text-align: center
+  
+.heading-background
+  margin: 0.2em
+  padding: 0.5em
+  -moz-border-radius: 1em
+  -webkit-border-radius: 1em
+  border-radius: 1em
+  background-image: -moz-linear-gradient(top, rgb(0,0,0), rgb(0,0,255),rgb(0,0,0))
+  background-image: -webkit-linear-gradient(top, rgb(0,0,0), rgb(0,0,255),rgb(0,0,0))
 
 .aside-heading
   font-weight: bold

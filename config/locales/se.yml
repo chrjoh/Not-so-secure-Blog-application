@@ -12,6 +12,11 @@ sv:
       previous: "&laquo; Föregående"
       next: "Nästa &raquo;"
       truncate: "..."
+
+  forms:
+    button:
+      create_label: 'Skapa en post'
+      
   number:
     # Used in number_with_delimiter()
     # These are also the defaults for 'currency', 'percentage', 'precision', and 'human'

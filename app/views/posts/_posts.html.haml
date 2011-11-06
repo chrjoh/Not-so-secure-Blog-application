@@ -1,9 +1,9 @@
 .post-post-feed
-  %h4.post-feed-heading= "Senaste uppdateringarna"
+  %h4.post-feed-heading.heading-background.heading-center= "Senaste uppdateringarna"
 
   %ol
     - posts.each do |post|
-      %li.post-feed
+      %li.post-feed.post-background
         %h4.post-feed-heading= post.title
 
         %p.post-feed-text
