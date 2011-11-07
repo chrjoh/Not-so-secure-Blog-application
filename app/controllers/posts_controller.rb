@@ -26,6 +26,10 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find(params[:id])
+    @post.update_attributes params[:post]
+    @post.save
+    redirect_to post_path(@post)
   end
 
   def destroy
@@ -36,5 +40,6 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 end

@@ -1,0 +1,6 @@
+%section.post
+
+  .post-main
+    = render partial: 'form', locals: {post: @post}
+
+  = render partial: 'side_bars', locals: {post: @post}

@@ -28,23 +28,28 @@ describe PostsController do
     end
   end
 
-  describe "PUT 'update'" do
-    it "returns http success" do
-      pending 'Not Yet Implemented'
-    end
-  end
-
   describe "DELETE 'destroy'" do
     it "returns http success" do
       pending 'Not Yet Implemented'
     end
   end
 
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit', :id => @post.id
-      response.should be_success
+  context "edit an post" do
+    describe "PUT 'update'" do
+      it "returns http success" do
+        @post.title = "Updated"
+        put 'update', :id => @post.id, :post => @post
+        response.should be_redirect
+      end
     end
+
+    describe "GET 'edit'" do
+      it "returns http success" do
+        get 'edit', :id => @post.id
+        response.should be_success
+      end
+    end
+
   end
 
   describe "GET 'new'" do

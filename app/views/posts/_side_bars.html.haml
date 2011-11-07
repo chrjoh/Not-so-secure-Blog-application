@@ -13,4 +13,7 @@
     %nav
       %ol
         %li
-          %h4.post-latest-link= link_to('Ny post', new_post_url, :class => "button add")
+          %h4.post-latest-link= link_to('Ny post', new_post_path, :class => "button add")
+        - if local_assigns[:post]
+          %li
+            %h4.post-latest-link= link_to('Uppdatera post', edit_post_path(post), :class => "button add")
