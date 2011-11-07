@@ -15,7 +15,7 @@ sv:
 
   forms:
     button:
-      create_label: 'Skapa en post'
+      create_label: 'Spara'
       
   number:
     # Used in number_with_delimiter()
