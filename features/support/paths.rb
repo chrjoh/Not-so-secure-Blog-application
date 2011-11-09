@@ -15,6 +15,10 @@ module NavigationHelpers
       post = Post.where(title: "Ny post").first
       "/posts/#{post.id}"
 
+    when /new title page/
+      post = Post.where(title: "new title").first
+      "/posts/#{post.id}"
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
