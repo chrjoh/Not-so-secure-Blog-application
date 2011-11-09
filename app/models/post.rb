@@ -8,4 +8,8 @@ class Post
   field :title, :type => String
   field :body, :type => String
   field :published, :type => Boolean
+
+  def as_json(*options)
+    super(:except => [:versions, :_id])
+  end
 end
