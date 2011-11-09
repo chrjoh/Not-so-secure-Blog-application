@@ -1,22 +1,18 @@
 class PostsController < ApplicationController
 
+  respond_to :json, :html
+
   def index
     @posts = Post.all
     @posts = @posts.order_by([[:created_at, :desc]])
 
     @posts = @posts.page params[:page] unless @posts.count == 0
-    respond_to do |format|
-      format.html
-      format.any(:json) { render request.format.to_sym => @posts }
-    end
+    respond_with @posts
   end
 
   def show
     @post = Post.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.any(:json) { render request.format.to_sym => @post }
-    end
+    respond_with @post
   end
 
   def create
