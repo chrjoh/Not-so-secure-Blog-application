@@ -38,7 +38,7 @@ describe PostsController do
     describe "PUT 'update'" do
       it "returns http success" do
         @post.title = "Updated"
-        put 'update', :id => @post.id, :post => @post
+        put 'update', :id => @post.id, :post => @post.as_json
         response.should be_redirect
       end
     end
