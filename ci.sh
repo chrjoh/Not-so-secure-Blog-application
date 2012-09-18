@@ -1,4 +1,5 @@
 #!/bin/bash --login
+#
 source .rvmrc
 bundle install --path .bundle --without development stage production
 bundle exec rake db:migrate
